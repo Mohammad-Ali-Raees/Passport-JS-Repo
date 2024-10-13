@@ -13,7 +13,12 @@ const UsersSchema =  mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    PostInfo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Posts', 
+       
+    },
 })
 
 module.exports = new mongoose.model("Users",UsersSchema);
